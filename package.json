@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf ./build",
     "build": "npm run clean && tsc --build ./tsconfig.json",
-    "postbuild": "cpr node_modules ./build/node_modules",
+    "postbuild": "cpr package.json ./build/package.json && cd ./build && npm install --only=production",
     "start": "ts-node ./src/index.ts"
   },
   "author": "Peet Janse van Vuuren",
@@ -20,7 +20,8 @@
     "arrowParens": "avoid"
   },
   "dependencies": {
-    "firebase-admin": "^9.5.0"
+    "firebase-admin": "^9.5.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@types/uuid": "^8.3.0",
