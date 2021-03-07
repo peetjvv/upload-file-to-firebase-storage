@@ -1,5 +1,3 @@
-// https://stackoverflow.com/questions/60922198/firebase-storage-upload-image-file-from-node-js
-
 import admin from 'firebase-admin';
 import { uuid } from 'uuidv4';
 

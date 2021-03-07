@@ -1,0 +1,1 @@
+Heavily inspired by [hemauricio's](https://stackoverflow.com/users/4735348/hemauricio) answer on [this SO thread](https://stackoverflow.com/questions/60922198/firebase-storage-upload-image-file-from-node-js). This script uploads a given file to a given Firebase storage bucket.
