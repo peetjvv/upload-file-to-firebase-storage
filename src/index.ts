@@ -1,11 +1,12 @@
-import admin from 'firebase-admin';
-import { uuid } from 'uuidv4';
+import * as admin from 'firebase-admin';
+import { v4 as uuid } from 'uuid';
 
-// TODO: set these as command line args
-const serviceAccount = require('path/to/serviceAccountKey.json');
-const storageBucketUrl = '<BUCKET_NAME>.appspot.com';
-const filename = 'path/to/image.png';
-const contentType = 'image/png';
+const args = process.argv;
+console.log(args);
+const serviceAccount = args[2]; // e.g. 'path/to/serviceAccountKey.json'
+const storageBucketUrl = args[3]; // e.g. '<BUCKET_NAME>.appspot.com'
+const filename = args[4]; // e.g. 'path/to/image.png'
+const contentType = args[5]; // e.g. 'image/png'
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
