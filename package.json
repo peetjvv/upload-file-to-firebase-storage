@@ -6,6 +6,7 @@
   "scripts": {
     "clean": "rimraf ./build",
     "build": "npm run clean && tsc --build ./tsconfig.json",
+    "postbuild": "cpr node_modules ./build/node_modules",
     "start": "ts-node ./src/index.ts"
   },
   "author": "Peet Janse van Vuuren",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "@types/uuid": "^8.3.0",
+    "cpr": "^3.0.1",
     "rimraf": "^3.0.2",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.3"
