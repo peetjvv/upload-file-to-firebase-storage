@@ -34,5 +34,5 @@ const uploadFile = async () => {
 };
 
 uploadFile()
-  .then(response => console.log(`${filename} uploaded.`, response))
-  .catch(err => console.error(`failed to upload ${filename}`, err));
+  .then(() => console.log(`'${filename}' uploaded successfully`))
+  .catch(err => console.error(`failed to upload '${filename}'`, err));
